@@ -7,13 +7,21 @@
 </head>
 <body>
     <script>
-        let hinhchunhat = {
+        let rectangle = {
             width: 200,
             height: 250,
+            dientich: function() {
+                alert('Diện tích hình chữ nhật là: ' + this.height * this.width)
+            },
+            chuvi: function() {
+                alert('Chu vi hình chữ nhật là: ' + (this.height + this.width) * 2)
+            }
         }
         document.write(
-            `<canvas id="myCanvas" width="${hinhchunhat.width}" height="${hinhchunhat.height}" style="border:1px solid #d3d3d3;"></canvas>`
+            `<canvas id="myCanvas" width="${rectangle.width}" height="${rectangle.height}" style="border:1px solid #d3d3d3;"></canvas>`
         )
+        rectangle.dientich();
+        rectangle.chuvi();
     </script>
 </body>
 </html>
